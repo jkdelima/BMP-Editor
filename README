@@ -1,0 +1,29 @@
+Jeremy Kyle Delima 10109442
+CPSC 453 Assignment 1
+
+Reused code:
+From the folder downloaded for this assignment, only the TextureBMP.cpp file was changed, so all the RgbImage files are reused, and the other TextureBMP files. The loadTextureFromFile, updateTexture, menu functions, drawScene, keyboard, and resizeWindow functions are all based off of the original document.
+
+Running the program:
+All the files needed are in the zipped files sent. In the command line we navigate to the folder containing all the files and enter the command 'make'. Then we enter the command './app' which displays the application window.
+
+Running the filters:
+Once the application window is up and running it displays two blank boxes, one at the top left (original image) and another at the bottom right (modified image) of the window. Right-click on the window to bring out the popup menu which gives us the following options:
+1. Load Image - This function loads an image onto both spaces of the window, without loading an image the other operations are useless. It prompts the user to select an image by entering an integer between 1 to 7.
+2. Quantization - This function prompts the user for the level parameter for quantization, and after input displays the quantized image on the bottom right space.
+3. Brightness - This function prompts the user for the brightness level, and after input displays the brightened/dimmed image on the bottom right space.
+4. Saturation - This function prompts the user for the saturation value, and after input displays the saturated image on the bottom right space.
+5. Scale - This function scales the image along the x-axis by a factor of 2, and displays this image on the bottom right space. (Note: if we perform another right-click or resize the window the modified image bugs out and outputs a striped square image.)
+6. Rotate - This function rotates the image counter-clockwise by 45 degrees, and displays this image on the bottom right space. It cuts off the image if it reaches outside of the space provided for it.
+7. Contrast - This function prompts the user for the contrast level, and after input displays the image on the bottom right space.
+8. Save - This function prompts the user for an output filename, and after input saves the modified image on the bottom right into the current folder.
+Note: These operations are not cumulative and only result in one applied change no matter how many operations have been performed before.
+
+Bonuses:
+Only the contrast bonus is implemented and the explanation on how to operate it is listed above.
+
+Bugs:
+The only warnings are from the unused parameters in the keyboard function as I do not really need to use them.
+Also the save function seg faults if there is no loaded image or a loaded image is not modified.
+
+Note: All the modified images are saved in the folder as <operated>.bmp.
